@@ -24,15 +24,15 @@ void loop()
     }
 
     int key = Serial.parseInt();
-    int val = map(key, 0, 9, 1488, 1588);
+    int val = map(key, 0, 9, 1000, 1500);
     Serial.print(key);
     Serial.print(" ");
     Serial.println(val);
 
-    if (val < 1100 || val > 1900)
+    if (val < 1000 || val > 1652)
     {
         Serial.println("not valid");
-        val = 1488;
+        val = 1000;
     }
 
     for (int i=0; i < nbMotor; i++) {
